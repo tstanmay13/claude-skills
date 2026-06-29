@@ -1,0 +1,33 @@
+{
+  "name": "tstanmay13-skills",
+  "owner": {
+    "name": "Tanmay Singh",
+    "url": "https://github.com/tstanmay13"
+  },
+  "metadata": {
+    "description": "Tanmay Singh's Claude Code skills — conversational skills that change how Claude works with you.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "debrief",
+      "source": {
+        "source": "github",
+        "repo": "tstanmay13/debrief"
+      },
+      "description": "An end-of-session learning ritual that converts finished work into durable understanding — by making you recall and reconstruct it before filling any gaps, instead of letting the AI's fluency stand in for your own.",
+      "category": "learning",
+      "tags": ["learning", "retrieval-practice", "reflection", "debrief"]
+    },
+    {
+      "name": "product-view",
+      "source": {
+        "source": "github",
+        "repo": "tstanmay13/product-view"
+      },
+      "description": "A conversational lens that keeps Claude in product-space — describing what the human on the other side of the screen experiences — until you explicitly ask to cross into code-space.",
+      "category": "product",
+      "tags": ["product", "communication", "explanations", "user-perspective"]
+    }
+  ]
+}
