@@ -28,6 +28,16 @@
       "description": "A conversational lens that keeps Claude in product-space — describing what the human on the other side of the screen experiences — until you explicitly ask to cross into code-space.",
       "category": "product",
       "tags": ["product", "communication", "explanations", "user-perspective"]
+    },
+    {
+      "name": "think-like-fable-5",
+      "source": {
+        "source": "github",
+        "repo": "tstanmay13/think-like-fable-5"
+      },
+      "description": "Fable 5's working discipline, distilled — outcome-first reporting, act-don't-ask autonomy, faithful verification. Load at session start on a smaller model.",
+      "category": "workflow",
+      "tags": ["discipline", "reporting", "autonomy", "verification", "small-models"]
     }
   ]
 }
