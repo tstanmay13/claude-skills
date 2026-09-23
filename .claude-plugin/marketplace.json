@@ -12,8 +12,8 @@
     {
       "name": "debrief",
       "source": {
-        "source": "github",
-        "repo": "tstanmay13/debrief"
+        "source": "url",
+        "url": "https://github.com/tstanmay13/debrief.git"
       },
       "description": "An end-of-session learning ritual that converts finished work into durable understanding — by making you recall and reconstruct it before filling any gaps, instead of letting the AI's fluency stand in for your own.",
       "category": "learning",
@@ -22,8 +22,8 @@
     {
       "name": "product-view",
       "source": {
-        "source": "github",
-        "repo": "tstanmay13/product-view"
+        "source": "url",
+        "url": "https://github.com/tstanmay13/product-view.git"
       },
       "description": "A conversational lens that keeps Claude in product-space — describing what the human on the other side of the screen experiences — until you explicitly ask to cross into code-space.",
       "category": "product",
@@ -32,8 +32,8 @@
     {
       "name": "think-like-fable-5",
       "source": {
-        "source": "github",
-        "repo": "tstanmay13/think-like-fable-5"
+        "source": "url",
+        "url": "https://github.com/tstanmay13/think-like-fable-5.git"
       },
       "description": "Fable 5's working discipline, distilled — outcome-first reporting, act-don't-ask autonomy, faithful verification. Load at session start on a smaller model.",
       "category": "workflow",
