@@ -8,6 +8,7 @@ Add the marketplace once and install any of them:
 /plugin marketplace add tstanmay13/claude-skills
 /plugin install debrief@tstanmay13-skills
 /plugin install product-view@tstanmay13-skills
+/plugin install think-like-fable-5@tstanmay13-skills
 ```
 
 ## The skills
@@ -16,6 +17,7 @@ Add the marketplace once and install any of them:
 |---|---|---|
 | **debrief** | At the end of a session, turns finished work into actual learning — makes *you* reconstruct what happened before it fills any gaps, so the AI's fluency stops standing in for your own understanding. | [tstanmay13/debrief](https://github.com/tstanmay13/debrief) |
 | **product-view** | Flips Claude out of code-language and into the perspective of whoever's on the other side of the screen — the customer, user, player, reader — until you ask for the code. | [tstanmay13/product-view](https://github.com/tstanmay13/product-view) |
+| **think-like-fable-5** | Gives smaller models an outcome-first workflow with autonomous action and faithful verification. | [tstanmay13/think-like-fable-5](https://github.com/tstanmay13/think-like-fable-5) |
 
 ### debrief
 
@@ -33,6 +35,10 @@ Most software explanations sneak implementation language into descriptions of wh
 
 ![product-view in action](https://github.com/tstanmay13/product-view/raw/main/assets/demo.gif)
 
+### think-like-fable-5
+
+Use this skill at the start of a session with a smaller model to guide reporting, action, and verification. Its full instructions live in the [skill repository](https://github.com/tstanmay13/think-like-fable-5).
+
 ## Installing a single skill directly
 
 Each skill is also its own standalone marketplace, if you only want one:
@@ -45,6 +51,11 @@ Each skill is also its own standalone marketplace, if you only want one:
 ```
 /plugin marketplace add tstanmay13/product-view
 /plugin install product-view@tstanmay13-product-view
+```
+
+```
+/plugin marketplace add tstanmay13/think-like-fable-5
+/plugin install think-like-fable-5@tstanmay13-think-like-fable-5
 ```
 
 ## License
