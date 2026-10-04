@@ -17,7 +17,12 @@
       },
       "description": "An end-of-session learning ritual that converts finished work into durable understanding — by making you recall and reconstruct it before filling any gaps, instead of letting the AI's fluency stand in for your own.",
       "category": "learning",
-      "tags": ["learning", "retrieval-practice", "reflection", "debrief"]
+      "tags": [
+        "learning",
+        "retrieval-practice",
+        "reflection",
+        "debrief"
+      ]
     },
     {
       "name": "product-view",
@@ -27,7 +32,12 @@
       },
       "description": "A conversational lens that keeps Claude in product-space — describing what the human on the other side of the screen experiences — until you explicitly ask to cross into code-space.",
       "category": "product",
-      "tags": ["product", "communication", "explanations", "user-perspective"]
+      "tags": [
+        "product",
+        "communication",
+        "explanations",
+        "user-perspective"
+      ]
     },
     {
       "name": "think-like-fable-5",
@@ -37,7 +47,28 @@
       },
       "description": "Fable 5's working discipline, distilled — outcome-first reporting, act-don't-ask autonomy, faithful verification. Load at session start on a smaller model.",
       "category": "workflow",
-      "tags": ["discipline", "reporting", "autonomy", "verification", "small-models"]
+      "tags": [
+        "discipline",
+        "reporting",
+        "autonomy",
+        "verification",
+        "small-models"
+      ]
+    },
+    {
+      "name": "orchestrate",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/tstanmay13/orchestrate.git"
+      },
+      "description": "Run a multi-session job as its orchestrator: plan, brief worker sessions, monitor, verify their claims, and loop the human in only for decisions.",
+      "category": "workflow",
+      "tags": [
+        "orchestration",
+        "multi-agent",
+        "background-sessions",
+        "verification"
+      ]
     }
   ]
 }

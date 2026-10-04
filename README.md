@@ -9,6 +9,7 @@ Add the marketplace once and install any of them:
 /plugin install debrief@tstanmay13-skills
 /plugin install product-view@tstanmay13-skills
 /plugin install think-like-fable-5@tstanmay13-skills
+/plugin install orchestrate@tstanmay13-skills
 ```
 
 ## The skills
@@ -18,6 +19,7 @@ Add the marketplace once and install any of them:
 | **debrief** | At the end of a session, turns finished work into actual learning — makes *you* reconstruct what happened before it fills any gaps, so the AI's fluency stops standing in for your own understanding. | [tstanmay13/debrief](https://github.com/tstanmay13/debrief) |
 | **product-view** | Flips Claude out of code-language and into the perspective of whoever's on the other side of the screen — the customer, user, player, reader — until you ask for the code. | [tstanmay13/product-view](https://github.com/tstanmay13/product-view) |
 | **think-like-fable-5** | Gives smaller models an outcome-first workflow with autonomous action and faithful verification. | [tstanmay13/think-like-fable-5](https://github.com/tstanmay13/think-like-fable-5) |
+| **orchestrate** | One session plans a multi-session job, briefs worker sessions, checks every claim they report, and interrupts you only for decisions. It never writes the code itself. | [tstanmay13/orchestrate](https://github.com/tstanmay13/orchestrate) |
 
 ### debrief
 
@@ -38,6 +40,10 @@ Most software explanations sneak implementation language into descriptions of wh
 ### think-like-fable-5
 
 Use this skill at the start of a session with a smaller model to guide reporting, action, and verification. Its full instructions live in the [skill repository](https://github.com/tstanmay13/think-like-fable-5).
+
+### orchestrate
+
+`/orchestrate <goal>` runs a job across several Claude Code sessions. State lives in a run directory outside every worktree. Each worker gets a brief with its exact branch and permissions, and reports in a fixed format that the orchestrator checks against CI and the diff. Project rules go in a private profile. The [skill repository](https://github.com/tstanmay13/orchestrate) has details.
 
 ## Installing a single skill directly
 
