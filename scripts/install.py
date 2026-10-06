@@ -25,7 +25,11 @@ def installed(agent, env):
 
 def sync(agent, profile, releases, verify):
     env = os.environ.copy()
-    env['CLAUDE_CONFIG_DIR' if agent == 'claude' else 'CODEX_HOME'] = str(profile)
+    if agent == 'claude' and profile.resolve() == (Path.home()/'.claude').resolve():
+        # An explicit default path relocates Claude's account config from ~/.claude.json.
+        env.pop('CLAUDE_CONFIG_DIR', None)
+    else:
+        env['CLAUDE_CONFIG_DIR' if agent == 'claude' else 'CODEX_HOME'] = str(profile)
     if not verify:
         profile.mkdir(parents=True, exist_ok=True)
     print(f'{agent}: {profile}', flush=True)
