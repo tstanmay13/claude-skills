@@ -1,0 +1,10 @@
+{
+  "name": "tstanmay13-skills",
+  "owner": {"name": "Tanmay Singh", "url": "https://github.com/tstanmay13"},
+  "plugins": [
+    {"name": "debrief", "repo": "tstanmay13/debrief", "category": "learning"},
+    {"name": "product-view", "repo": "tstanmay13/product-view", "category": "product"},
+    {"name": "think-like-fable-5", "repo": "tstanmay13/think-like-fable-5", "category": "workflow"},
+    {"name": "orchestrate", "repo": "tstanmay13/orchestrate", "category": "workflow"}
+  ]
+}

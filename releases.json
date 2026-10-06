@@ -1,0 +1,18 @@
+{
+  "debrief": {
+    "version": "0.1.2",
+    "sha": "7337cfc7476f78022cd0bdd7dfd3d3ed9e026d58"
+  },
+  "product-view": {
+    "version": "0.1.4",
+    "sha": "b072ecbb307e19575d61062782b4e84dc9651e4b"
+  },
+  "think-like-fable-5": {
+    "version": "0.1.1",
+    "sha": "7b49bd8322d81627232483b6c7f0b3c5a32b4347"
+  },
+  "orchestrate": {
+    "version": "0.1.2",
+    "sha": "2dd1e1eda3b149de00f757f8a37ed78df21b0ee5"
+  }
+}

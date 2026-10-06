@@ -5,70 +5,49 @@
     "url": "https://github.com/tstanmay13"
   },
   "metadata": {
-    "description": "Tanmay Singh's Claude Code skills — conversational skills that change how Claude works with you.",
-    "version": "0.1.0"
+    "description": "Tanmay Singh's skills for Claude Code and Codex.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "debrief",
       "source": {
         "source": "url",
-        "url": "https://github.com/tstanmay13/debrief.git"
+        "url": "https://github.com/tstanmay13/debrief.git",
+        "sha": "7337cfc7476f78022cd0bdd7dfd3d3ed9e026d58"
       },
-      "description": "An end-of-session learning ritual that converts finished work into durable understanding — by making you recall and reconstruct it before filling any gaps, instead of letting the AI's fluency stand in for your own.",
-      "category": "learning",
-      "tags": [
-        "learning",
-        "retrieval-practice",
-        "reflection",
-        "debrief"
-      ]
+      "description": "An end-of-session learning ritual that converts finished work into durable understanding \u2014 by making you recall and reconstruct it before filling any gaps, instead of letting the AI's fluency stand in for your own.",
+      "category": "learning"
     },
     {
       "name": "product-view",
       "source": {
         "source": "url",
-        "url": "https://github.com/tstanmay13/product-view.git"
+        "url": "https://github.com/tstanmay13/product-view.git",
+        "sha": "b072ecbb307e19575d61062782b4e84dc9651e4b"
       },
-      "description": "A conversational lens that keeps Claude in product-space — describing what the human on the other side of the screen experiences — until you explicitly ask to cross into code-space.",
-      "category": "product",
-      "tags": [
-        "product",
-        "communication",
-        "explanations",
-        "user-perspective"
-      ]
+      "description": "A conversational lens that keeps the agent in product-space \u2014 describing what the human on the other side of the screen experiences \u2014 until you explicitly ask to cross into code-space.",
+      "category": "product"
     },
     {
       "name": "think-like-fable-5",
       "source": {
         "source": "url",
-        "url": "https://github.com/tstanmay13/think-like-fable-5.git"
+        "url": "https://github.com/tstanmay13/think-like-fable-5.git",
+        "sha": "7b49bd8322d81627232483b6c7f0b3c5a32b4347"
       },
-      "description": "Fable 5's working discipline, distilled — outcome-first reporting, act-don't-ask autonomy, faithful verification. Load at session start on a smaller model.",
-      "category": "workflow",
-      "tags": [
-        "discipline",
-        "reporting",
-        "autonomy",
-        "verification",
-        "small-models"
-      ]
+      "description": "Fable 5's working discipline, distilled \u2014 outcome-first reporting, act-don't-ask autonomy, faithful verification. Load at session start on a smaller model.",
+      "category": "workflow"
     },
     {
       "name": "orchestrate",
       "source": {
         "source": "url",
-        "url": "https://github.com/tstanmay13/orchestrate.git"
+        "url": "https://github.com/tstanmay13/orchestrate.git",
+        "sha": "2dd1e1eda3b149de00f757f8a37ed78df21b0ee5"
       },
       "description": "Run a multi-session job as its orchestrator: plan, brief worker sessions, monitor, verify their claims, and loop the human in only for decisions.",
-      "category": "workflow",
-      "tags": [
-        "orchestration",
-        "multi-agent",
-        "background-sessions",
-        "verification"
-      ]
+      "category": "workflow"
     }
   ]
 }

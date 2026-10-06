@@ -1,0 +1,60 @@
+{
+  "name": "tstanmay13-skills",
+  "interface": {
+    "displayName": "Tanmay Singh's Skills"
+  },
+  "plugins": [
+    {
+      "name": "debrief",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/tstanmay13/debrief.git",
+        "sha": "7337cfc7476f78022cd0bdd7dfd3d3ed9e026d58"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "product-view",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/tstanmay13/product-view.git",
+        "sha": "b072ecbb307e19575d61062782b4e84dc9651e4b"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "think-like-fable-5",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/tstanmay13/think-like-fable-5.git",
+        "sha": "7b49bd8322d81627232483b6c7f0b3c5a32b4347"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "orchestrate",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/tstanmay13/orchestrate.git",
+        "sha": "2dd1e1eda3b149de00f757f8a37ed78df21b0ee5"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

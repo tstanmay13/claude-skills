@@ -1,69 +1,52 @@
-# tstanmay13's Claude Code skills
+# Tanmay Singh’s agent skills
 
-A marketplace of [Claude Code](https://docs.claude.com/en/docs/claude-code) skills. Each one is a **conversational skill** — it changes *how* Claude works with you, rather than adding a command you have to remember.
+A public plugin catalog for **Claude Code and Codex**. Each plugin has its own source repository and release version. The catalog contains installation metadata and release tooling; skill instructions live in the source repos.
 
-Add the marketplace once and install any of them:
+The existing repository and marketplace names stay unchanged so current Claude installs keep working.
 
-```
-/plugin marketplace add tstanmay13/claude-skills
-/plugin install debrief@tstanmay13-skills
-/plugin install product-view@tstanmay13-skills
-/plugin install think-like-fable-5@tstanmay13-skills
-/plugin install orchestrate@tstanmay13-skills
-```
-
-## The skills
-
-| Skill | What it does | Repo |
+| Plugin | Purpose | Source |
 |---|---|---|
-| **debrief** | At the end of a session, turns finished work into actual learning — makes *you* reconstruct what happened before it fills any gaps, so the AI's fluency stops standing in for your own understanding. | [tstanmay13/debrief](https://github.com/tstanmay13/debrief) |
-| **product-view** | Flips Claude out of code-language and into the perspective of whoever's on the other side of the screen — the customer, user, player, reader — until you ask for the code. | [tstanmay13/product-view](https://github.com/tstanmay13/product-view) |
-| **think-like-fable-5** | Gives smaller models an outcome-first workflow with autonomous action and faithful verification. | [tstanmay13/think-like-fable-5](https://github.com/tstanmay13/think-like-fable-5) |
-| **orchestrate** | One session plans a multi-session job, briefs worker sessions, checks every claim they report, and interrupts you only for decisions. It never writes the code itself. | [tstanmay13/orchestrate](https://github.com/tstanmay13/orchestrate) |
+| **debrief** | Turn finished work into understanding through recall and feedback | [debrief](https://github.com/tstanmay13/debrief) |
+| **product-view** | Explain features, bugs, and plans through the user’s experience | [product-view](https://github.com/tstanmay13/product-view) |
+| **think-like-fable-5** | Outcome-first reporting, scoped autonomy, honest verification | [think-like-fable-5](https://github.com/tstanmay13/think-like-fable-5) |
+| **orchestrate** | Brief workers, coordinate separate ownership, verify their reports | [orchestrate](https://github.com/tstanmay13/orchestrate) |
 
-### debrief
+## Install
 
-> *"did I actually learn that, or did I just watch you do it?"*
+Claude Code:
 
-Working with a capable AI is a fluency-illusion machine: the work flows past, it all feels understood, and you retain nothing. `debrief` runs a recall-first ritual at the end of a session — you reconstruct the one or two ideas worth keeping, it catches the gaps, and distills a durable lesson.
-
-![debrief in action](https://github.com/tstanmay13/debrief/raw/main/assets/demo.gif)
-
-### product-view
-
-> *"what's actually broken for our customers?"*
-
-Most software explanations sneak implementation language into descriptions of what the product does. `product-view` keeps Claude describing what the human on the other side of the screen experiences — what they see, do, and feel — until you explicitly ask to cross into code.
-
-![product-view in action](https://github.com/tstanmay13/product-view/raw/main/assets/demo.gif)
-
-### think-like-fable-5
-
-Use this skill at the start of a session with a smaller model to guide reporting, action, and verification. Its full instructions live in the [skill repository](https://github.com/tstanmay13/think-like-fable-5).
-
-### orchestrate
-
-`/orchestrate <goal>` runs a job across several Claude Code sessions. State lives in a run directory outside every worktree. Each worker gets a brief with its exact branch and permissions, and reports in a fixed format that the orchestrator checks against CI and the diff. Project rules go in a private profile. The [skill repository](https://github.com/tstanmay13/orchestrate) has details.
-
-## Installing a single skill directly
-
-Each skill is also its own standalone marketplace, if you only want one:
-
-```
-/plugin marketplace add tstanmay13/debrief
-/plugin install debrief@tstanmay13-debrief
+```sh
+claude plugin marketplace add tstanmay13/claude-skills
+claude plugin install debrief@tstanmay13-skills
+claude plugin install product-view@tstanmay13-skills
+claude plugin install think-like-fable-5@tstanmay13-skills
+claude plugin install orchestrate@tstanmay13-skills
 ```
 
-```
-/plugin marketplace add tstanmay13/product-view
-/plugin install product-view@tstanmay13-product-view
+Codex:
+
+```sh
+codex plugin marketplace add tstanmay13/claude-skills
+codex plugin add debrief@tstanmay13-skills
+codex plugin add product-view@tstanmay13-skills
+codex plugin add think-like-fable-5@tstanmay13-skills
+codex plugin add orchestrate@tstanmay13-skills
 ```
 
-```
-/plugin marketplace add tstanmay13/think-like-fable-5
-/plugin install think-like-fable-5@tstanmay13-think-like-fable-5
-```
+Install only the plugins you want. Restart the agent after installation. Invoke `/debrief`, `/product-view`, `/think-like-fable-5`, or `/orchestrate` in Claude Code; use `$debrief`, `$product-view`, `$think-like-fable-5`, or `$orchestrate` in Codex. Debrief and Product View also support contextual activation. The other two are explicitly invoked.
 
-## License
+Orchestrate requires a local coding environment with worker capabilities. Its instructions adapt to Claude Code or Codex tools; it does not supply those tools. Plain Chat can help plan but cannot run the local workflow.
 
-[MIT](LICENSE). Each skill's source and full docs live in its own repo, linked above.
+## Personal setup and maintenance
+
+Clone this catalog and the four source repos as sibling directories. `./install.sh` refreshes all four released plugins in default and personal Claude and Codex profiles, and `./verify.sh` checks versions and enabled state. To target different profiles, pass repeated `--claude-home <path>` and `--codex-home <path>` flags to either script. These scripts do not modify account logins.
+
+`catalog.json` identifies the source repos. `scripts/catalog.py generate` reads their committed release metadata and emits `.claude-plugin/marketplace.json`, `.agents/plugins/marketplace.json`, and `releases.json`. Both catalogs pin the same source commits. Source editing and installed caches remain separate. See [PUBLISHING.md](PUBLISHING.md) for validation, release, and submission steps.
+
+## Public directories
+
+This GitHub marketplace is installable directly. It does not imply a listing or approval in either agent’s official directory. OpenAI submission ZIPs are generated with `python3 scripts/catalog.py package`; public publication requires developer identity verification and directory review.
+
+## License and attribution
+
+The catalog is [MIT](LICENSE). Each plugin preserves its own license and `NOTICE.md`. Third-party skills bundled in the private dev setup keep their upstream licenses and provenance there; they are not republished as these four original plugins. Private reviewer examples, voice samples, and company profiles stay in their private repo.
