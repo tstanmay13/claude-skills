@@ -9,7 +9,7 @@ The existing repository and marketplace names stay unchanged so current Claude i
 | **debrief** | Turn finished work into understanding through recall and feedback | [debrief](https://github.com/tstanmay13/debrief) |
 | **product-view** | Explain features, bugs, and plans through the user’s experience | [product-view](https://github.com/tstanmay13/product-view) |
 | **think-like-fable-5** | Outcome-first reporting, scoped autonomy, honest verification | [think-like-fable-5](https://github.com/tstanmay13/think-like-fable-5) |
-| **orchestrate** | Brief workers, coordinate separate ownership, verify their reports | [orchestrate](https://github.com/tstanmay13/orchestrate) |
+| **orchestrate** | Brief workers, coordinate separate ownership, verify their reports. Includes `/deepen` for the deeper version of any request | [orchestrate](https://github.com/tstanmay13/orchestrate) |
 
 ## Install
 
@@ -33,7 +33,7 @@ codex plugin add think-like-fable-5@tstanmay13-skills
 codex plugin add orchestrate@tstanmay13-skills
 ```
 
-Install only the plugins you want. Restart the agent after installation. Invoke `/debrief`, `/product-view`, `/think-like-fable-5`, or `/orchestrate` in Claude Code; use `$debrief`, `$product-view`, `$think-like-fable-5`, or `$orchestrate` in Codex. Debrief and Product View also support contextual activation. The other two are explicitly invoked.
+Install only the plugins you want. Restart the agent after installation. Invoke `/debrief`, `/product-view`, `/think-like-fable-5`, or `/orchestrate` (plus `/deepen` from the same plugin) in Claude Code; use `$debrief`, `$product-view`, `$think-like-fable-5`, `$orchestrate`, or `$deepen` in Codex. Debrief and Product View also support contextual activation. The other two are explicitly invoked.
 
 Orchestrate requires a local coding environment with worker capabilities. Its instructions adapt to Claude Code or Codex tools; it does not supply those tools. Plain Chat can help plan but cannot run the local workflow.
 
